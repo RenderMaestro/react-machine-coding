@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from "react";
 const Carousal = ({ data }) => {
   const [active, setActive] = useState(0);
   const interval = useRef(null);
-  console.log(interval);
-  console.log(active);
 
   useEffect(() => {
     start();
@@ -25,8 +23,6 @@ const Carousal = ({ data }) => {
       });
     }, 3000);
   };
-
-  console.log(interval);
 
   const stop = () => {
     if (interval.current) clearInterval(interval.current);
